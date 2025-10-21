@@ -32,7 +32,7 @@ sudo su
 
 Permite ejecutar comandos con privilegios de administrador.
 
-> Usa este comando con precaución: un error puede romper el sistema más rápido que un *error capa 8* con café derramado.
+> Usa este comando con precaución: un error puede romper el sistema más rápido que un *error capa 8*.
 
 ### 🔄 Actualizar el sistema
 
@@ -89,8 +89,8 @@ sudo apt install nombre_del_paquete
 Ejemplo:
 
 ```bash
-sudo apt install neofetch
-sudo apt install htop
+sudo apt install nano
+sudo apt install curl
 ```
 
 ### 🚀 Instalar con Snap
@@ -102,17 +102,17 @@ sudo snap install nombre_del_paquete
 Ejemplo:
 
 ```bash
-sudo snap install code --classic
+sudo snap install rider --classic
 sudo snap install spotify
 ```
 
 ### 📁 Instalar un paquete .deb
+1. Se debe descargar el archivo .deb de la web oficial del programa
+2. El comando de instalacion de un archivo `.deb` se debe ejecutar en la carpeta del archivo
 
 ```bash
 sudo dpkg -i nombre_del_paquete.deb
 ```
-
-Instala un paquete .deb (debe ejecutarse en la carpeta donde se encuentra el archivo).
 
 ### ❌ Desinstalar programas
 
@@ -131,7 +131,8 @@ El último comando desinstala programas instalados manualmente con archivos `.de
 * `pwd` → Muestra en qué carpeta estás.
 * `ls` → Lista los archivos de la carpeta actual.
 * `cd nombre_carpeta` → Cambia de carpeta.
-* `cd ..` → Sube un nivel.
+* `cd ..` → Sube un nivel.(retrocede a la carpeta anterior)
+* `cd ~` → Vuelve a la carpeta principal sin inportar tu ubicacion actual.
 
 ---
 
@@ -172,7 +173,12 @@ nano archivo.txt
 
 ## ☕ Conclusión
 
-Dominar la terminal de Linux es dominar la base de la infraestructura digital moderna. Todo gran sistema, desde servidores hasta naves espaciales (*guiño, Tony Stark*), necesita un operador que entienda la línea de comandos.
+Dominar la terminal de Linux es dominar la base de la infraestructura digital moderna. Todo gran sistema, desde servidores hasta robots, necesita un operador que entienda la línea de comandos.
 
+* Ten en cuenta que Linux es el sistema de la **libertad**. No te limites a esta guía: este es un buen punto de partida para seguir explorando y jugando con el sistema. El maravilloso mundo de Linux y la terminal está lleno de documentación, proyectos muy locos y una comunidad que siempre está dispuesta a ayudar.
+
+Aquí termina la guía, pero no el viaje.
+La terminal no es un límite, es un universo.
+Explora, rompe, reconstruye. Y nunca olvides:
 > “El buen código es como un buen espresso: concentrado, potente y mejor si se sirve caliente.”
 > — *J.A.R.V.I.S., asistente personal de Faragon*
