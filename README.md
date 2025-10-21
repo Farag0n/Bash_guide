@@ -98,6 +98,11 @@ sudo apt install curl
 ```bash
 sudo snap install nombre_del_paquete
 ```
+En algunos casos se nesecita agregarle esto:
+```bash
+sudo snap install nombre_del_paquete --classic
+```
+
 
 Ejemplo:
 
@@ -170,6 +175,12 @@ nano archivo.txt
 * Sal con **Ctrl + X**.
 
 ---
+
+### Visualizar un archivo sin abrir el editor
+```bash
+cat archivo.txt
+```
+`cat` permite visualizar archivos de texto sin necesidad de habrir un editor
 
 ## ☕ Conclusión
 
