@@ -8,15 +8,17 @@
 
 ### 🐧 ¿Cómo nació Linux?
 
-Linux nació en **1991**, cuando **Linus Torvalds**, un joven estudiante finlandés, decidió crear su propio sistema operativo inspirado en UNIX. Su idea inicial era simplemente aprender más sobre cómo funcionaban los sistemas, pero terminó iniciando una revolución en el mundo del software. Así nació el núcleo (*kernel*) de Linux, que más tarde se combinaría con herramientas del proyecto GNU para formar los sistemas que conocemos hoy.
+Linux nació en **1991**, creado por **Linus Torvalds**, como un proyecto personal para crear un sistema operativo libre y similar a UNIX. Su idea inicial era simplemente aprender más sobre cómo funcionaban los sistemas, pero terminó iniciando una revolución en el mundo del software. Así nació el núcleo (*kernel*) de Linux. Con el tiempo, miles de desarrolladores se unieron al proyecto, convirtiéndolo en el núcleo de la mayoría de los sistemas que usamos hoy, desde servidores hasta teléfonos Android.
 
 ### 💡 Filosofía de Linux
 
-La filosofía de Linux se basa en tres pilares fundamentales: **libertad, colaboración y conocimiento compartido**. Es un sistema **de código abierto**, lo que significa que cualquiera puede estudiar, modificar y mejorar su funcionamiento. Esta mentalidad ha permitido que Linux evolucione gracias al esfuerzo conjunto de millones de desarrolladores en todo el mundo.
+La filosofía de Linux se basa en tres pilares fundamentales: **libertad, colaboración y conocimiento compartido**. Es un sistema **open source**, lo que significa que cualquiera puede estudiar, modificar y mejorar su funcionamiento. Esta mentalidad ha permitido que Linux evolucione gracias al esfuerzo conjunto de millones de desarrolladores en todo el mundo. Su filosofía central es que el usuario debe tener el control total sobre su sistema, aprendiendo cómo funciona y adaptándolo a sus necesidades.
 
-Hoy, la mayoría de los **servidores del mundo** funcionan con Linux, y la mayor parte de su administración se realiza desde la **terminal**, el corazón del sistema y símbolo de su eficiencia.
+### 🤔 ¿Por qué es importante aprender la terminal?
 
-Aprender a usar la terminal no solo te da control absoluto sobre tu sistema, sino que también te enseña a pensar como un verdadero ingeniero.
+Hoy la mayoría de los servidores del mundo funcionan con Linux, y estos se administran principalmente desde la terminal. Dominarla es fundamental para desarrolladores, administradores de sistemas y curiosos que quieren entender cómo funciona todo.
+
+Aprender a usar la terminal no solo te da control absoluto sobre tu sistema, sino que también te enseña a pensar de forma lógica, resolver problemas y comprender cómo se comunican las piezas del software entre sí.
 
 ---
 
@@ -39,6 +41,40 @@ sudo apt update && sudo apt upgrade
 ```
 
 `update` actualiza la lista de paquetes disponibles, y `upgrade` instala las versiones más recientes.
+
+### 🧹 Limpiar paquetes innecesarios
+
+```bash
+sudo apt autoremove
+```
+
+Elimina dependencias que ya no se utilizan.
+
+```bash
+sudo apt autoclean
+```
+
+Elimina paquetes descargados que ya no sirven.
+
+```bash
+sudo apt clean
+```
+
+Borra completamente los archivos de instalación almacenados.
+
+### ⚙️ Reparar dependencias y paquetes
+
+```bash
+sudo apt -f install
+```
+
+Corrige dependencias rotas o faltantes si algo falla durante una instalación.
+
+```bash
+sudo dpkg -P nombre-del-paquete
+```
+
+Elimina un paquete junto con todos sus archivos relacionados.
 
 ---
 
@@ -76,12 +112,17 @@ sudo snap install spotify
 sudo dpkg -i nombre_del_paquete.deb
 ```
 
+Instala un paquete .deb (debe ejecutarse en la carpeta donde se encuentra el archivo).
+
 ### ❌ Desinstalar programas
 
 ```bash
 sudo apt remove nombre_del_paquete
 sudo snap remove nombre_del_paquete
+sudo dpkg -r nombre_del_paquete
 ```
+
+El último comando desinstala programas instalados manualmente con archivos `.deb`.
 
 ---
 
@@ -97,6 +138,7 @@ sudo snap remove nombre_del_paquete
 ## 🧱 Gestión de Archivos y Carpetas
 
 * `mkdir nombre_carpeta` → Crea una nueva carpeta.
+* `mkdir -p carpeta1/carpeta2` → Crea una carpeta dentro de otra.
 * `rmdir nombre_carpeta` → Elimina una carpeta vacía.
 * `rm nombre_archivo` → Elimina un archivo.
 * `cp origen destino` → Copia archivos o carpetas.
@@ -116,13 +158,7 @@ Elimina una carpeta y **todo su contenido de forma recursiva y sin confirmación
 
 ## 📝 Crear y editar archivos de texto
 
-### Crear un archivo vacío
-
-```bash
-touch archivo.txt
-```
-
-### Editar un archivo con Nano
+### Crear o editar un archivo con Nano
 
 ```bash
 nano archivo.txt
@@ -140,4 +176,3 @@ Dominar la terminal de Linux es dominar la base de la infraestructura digital mo
 
 > “El buen código es como un buen espresso: concentrado, potente y mejor si se sirve caliente.”
 > — *J.A.R.V.I.S., asistente personal de Faragon*
-
