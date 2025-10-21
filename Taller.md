@@ -13,7 +13,6 @@
    sudo apt upgrade
    ```
 
-
 2. **Instalar un editor de texto:**
 
    ```bash
@@ -55,7 +54,7 @@
 2. **Crear un archivo con contenido:**
 
    ```bash
-   nano
+   nano hola_mundo.txt
    ```
 
    Escribe dentro:
@@ -64,18 +63,29 @@
    ¡Hola Mundo desde la Terminal!
    ```
 
-3. **Crear un archivo vacío y una carpeta vacía:**
+   Guarda con **Ctrl + O**, presiona **Enter** y sal con **Ctrl + X**.
+
+3. **Mostrar el contenido del archivo:**
+
+   ```bash
+   cat hola_mundo.txt
+   ```
+
+   *Objetivo:* Verificar el contenido del archivo directamente desde la terminal.
+
+4. **Crear un archivo vacío y una carpeta vacía:**
 
    ```bash
    touch archivo_vacio.txt
    mkdir carpeta_vacia
    ```
 
-4. **Mostrar el contenido de tu carpeta:**
+5. **Mostrar el contenido de tu carpeta:**
 
    ```bash
    ls
    ```
+
 ---
 
 ## Manipulación y limpieza
@@ -86,13 +96,29 @@
    cp hola_mundo.txt carpeta_vacia/
    ```
 
-2. **Renombrar tu archivo vacío:**
+2. **Mover tu archivo copiado a la carpeta padre:**
+
+   ```bash
+   mv carpeta_vacia/hola_mundo.txt ../
+   ```
+
+   *Objetivo:* Aprender a mover archivos entre carpetas sin duplicarlos.
+
+3. **Renombrar tu archivo vacío:**
 
    ```bash
    mv archivo_vacio.txt notas.txt
    ```
 
-3. **Eliminar lo que creaste (con precaución):**
+4. **Visualizar el contenido del archivo movido:**
+
+   ```bash
+   cat ../hola_mundo.txt
+   ```
+
+   *Objetivo:* Confirmar que el archivo se movió correctamente y sigue siendo accesible.
+
+5. **Eliminar lo que creaste (con precaución):**
 
    ```bash
    rm notas.txt
@@ -100,3 +126,5 @@
    cd ..
    rm -rf CarpetaHija
    ```
+
+   *Objetivo:* Practicar la gestión de archivos, el movimiento de datos y el uso responsable del comando `rm -rf`.
